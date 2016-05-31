@@ -7,6 +7,7 @@ import org.springframework.dao.DataAccessException;
 import org.springframework.stereotype.Repository;
 import th.ac.kmutt.dashboard.constant.ServiceConstant;
 import th.ac.kmutt.dashboard.domain.KissLanguage;
+import th.ac.kmutt.dashboard.domain.KissQuery;
 import th.ac.kmutt.dashboard.model.*;
 
 import javax.persistence.EntityManager;
@@ -1060,12 +1061,25 @@ public class DashboardRepository {
     }
 
     public List<Year> listYear() throws DataAccessException {
+    	  Query query = kmuttEntityManager.createQuery("select  p from KissQuery p where p=41 " +
+                  "", KissQuery.class);
+          List<KissQuery> kissQuerys = (List<KissQuery>) query.getResultList();
+          String kissQueryYear="";
+         // HashMap<String,KissQuery> queryMap=new HashMap<String,KissQuery>(kissQuerys.size());
+          for (KissQuery kissQuery:kissQuerys){
+           //   queryMap.put(kissQuery.getId(),kissQuery);
+        	  kissQueryYear=kissQuery.getQueryStatement();
+          }
+          /*
         StringBuffer sb = new StringBuffer(" SELECT DISTINCT DD.CALENDAR_YEAR AS    YEAR_TH,\n" +
                 "   DD.CALENDAR_YEAR- (543) AS  YEAR_ENG \n" +
                 "    FROM DIM_DATE DD\n" +
                 "    WHERE DD.CALENDAR_YEAR <= YEAR(CURRENT DATE)+ (543)\n" +
                 "    ORDER BY CALENDAR_YEAR DESC");
-        Query query= entityManager.createNativeQuery(sb.toString());
+                */
+          StringBuffer sb = new StringBuffer(kissQueryYear);
+        // query= entityManager.createNativeQuery(sb.toString());
+          query= kmuttEntityManager.createNativeQuery(sb.toString());
         List obj=query.getResultList();
         List<java.lang.Object[]> results=null;
         List<Year> years=new ArrayList<Year>();
