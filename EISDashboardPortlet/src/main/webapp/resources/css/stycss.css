@@ -11,8 +11,14 @@
 [class*="fontawesome-"]:before {
      font-family: "FontAwesome",sans-serif;
 }
-
+/*
 body {
+     font-family: "Britannic","Exo",sans-serif;
+     font-size: 0.8em ! important;
+     line-height: normal ! important;
+}
+*/
+.aui .portlet-body {
      font-family: "Britannic","Exo",sans-serif;
      font-size: 0.8em ! important;
      line-height: normal ! important;
