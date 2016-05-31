@@ -104,6 +104,7 @@
             <div style="float: right;margin-right:2%;">
                 <form:form  id="dashboardForm" modelAttribute="dashboardForm" method="post"  name="dashboardForm" action="${formAction}" enctype="multipart/form-data">
                     <form:hidden path="lang" id="${ns}lang" />
+                     <form:hidden path="year" id="${ns}year_hidden" />
                     <div id="${ns}lang_section" style="float:left;">
                             <%--
                                 <span class="boxLang" id="print" style="float:left;">
@@ -728,7 +729,15 @@
         else
             return null;
     }
-
+	function ${ns}setHiddenValue(obj){
+		//alert(obj.value)
+		var yearVal=parseInt(obj.value)
+		
+		<c:if test="${dashboardForm.lang=='th'}">
+			yearVal=yearVal-543;
+        </c:if>
+        $("#${ns}year_hidden").val(yearVal)
+	}
     function ${ns}getLang(){
         var param={
             lang:'th'
@@ -788,7 +797,7 @@
         $("#${ns}lang_section").html(lang_str);
         // alert(year)
 
-        var year_str="<select id=\"${ns}year\" style=\"width: 100px;\" >";
+        var year_str="<select id=\"${ns}year\" onchange=\"${ns}setHiddenValue(this)\" style=\"width: 100px;\" >";
         if(lang !=null && lang!='null'){
             $("#${ns}lang").val(lang);
             <c:if test="${not empty yearM}">
@@ -817,8 +826,20 @@
         $("#${ns}year_section").html(year_str)
         if(year !=null && year!='null'){
             $("#${ns}year").val(year);
+        }else{
+        	<c:if test="${not empty dashboardForm && not empty dashboardForm.lang && not empty dashboardForm.year}">
+        		var yearVal=parseInt('${dashboardForm.year}')		
+        			<c:if test="${dashboardForm.lang=='th'}"> 
+        					yearVal=yearVal+543;  
+        			</c:if>
+        			$("#${ns}year").val(yearVal);
+        	</c:if>
         }
-        //alert(lang)
+        
+        //alert("year->"+year);
+        //alert("lang->"+lang);
+        //alert('${dashboardForm.year}')
+        //alert('${dashboardForm.lang}')
         ${ns}renderDashboard()
     });
 
