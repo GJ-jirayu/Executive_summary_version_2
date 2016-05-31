@@ -83,7 +83,7 @@ public class DashboardPortlet {
         logger.info("into lang->"+kissLanguageM.getLang());
         logger.info("into year 2->"+request.getParameter("year"));
         logger.info("into lang 2->"+request.getParameter("lang"));
-
+        logger.info("into year->"+dashboardForm.getYear());
         model.addAttribute("kissLanguage",
                 dashboardService.getKissLanguageM(kissLanguageM));
         YearM yearM=new YearM();
@@ -100,6 +100,7 @@ public class DashboardPortlet {
                              BindingResult result, Model model) {
 
         logger.info("into doSubmit lang->" + dashboardForm.getLang());
+        logger.info("into doSubmit year->" + dashboardForm.getYear());
         response.setRenderParameter("action", "list");
     }
 
@@ -108,7 +109,7 @@ public class DashboardPortlet {
     public void loadPdf(@RequestParam("year")  String year,@RequestParam("lang")  String lang, ResourceRequest request,
                         ResourceResponse response) throws PortletException, IOException {
         //ObjectMapper mapper = new ObjectMapper();
-        String filename = "Executive_Dashboard";
+        String filename = "Executive_Dashboard.jpg";
         //String year=request.getParameter("year");
         //String lang=request.getParameter("lang");
         logger.info("year="+year+",lang="+lang);
@@ -128,6 +129,7 @@ public class DashboardPortlet {
         File file=null;
         try {
             long start =System.currentTimeMillis();
+            //String cmd="/usr/local/bin/wkhtmltoimage --javascript-delay 10000 --no-stop-slow-scripts --format jpg --load-error-handling  ignore --width 1366  "+server_url+"  "+rootPath+"tmp/"+fileGen+".jpg";
             String cmd="/usr/local/bin/wkhtmltoimage --javascript-delay 10000 --no-stop-slow-scripts --format jpg --load-error-handling  ignore --width 1366  "+server_url+"  "+rootPath+"tmp/"+fileGen+".jpg";
             //String cmd="/usr/local/data/HttpServer/apache2/htdocs/wkhtmltoimage-amd64 --javascript-delay 3000 --quality 75 --crop-w "+width+" --crop-h "+height+" --format jpg  --use-xserver http://localhost:8080/MISSProcessImage/render?mtrId="+mtrId+"_"+mdc_key+"_"+chart+"_"+lang+"_"+width+"_"+height+" /tmp/"+fileGen+".jpg";
             //String cmd="";
