@@ -90,12 +90,13 @@
             <scope>provided</scope>
         </dependency>
         <!-- Portal -->
+        <!-- 
         <dependency>
             <groupId>com.liferay.portal</groupId>
             <artifactId>portal-service</artifactId>
             <version>6.2.3</version>
-            <scope>provided</scope>
         </dependency>
+         -->
 
         <!-- Xstream -->
         <dependency>

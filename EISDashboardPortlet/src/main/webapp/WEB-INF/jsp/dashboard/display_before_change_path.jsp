@@ -138,22 +138,22 @@ if(role){
                     <div id="${ns}lang_section" style="float:left;">
                             <%--
                                 <span class="boxLang" id="print" style="float:left;">
-                                    <img onclick="${ns}printFile()" src="<%= request.getContextPath()%>/resources/images/print1.jpg" style="cursor: pointer;">
+                                    <img onclick="${ns}printFile()" src="/EISDashboardPortlet/resources/images/print1.jpg" style="cursor: pointer;">
                                 </span>
                                 <c:if test="${kissLanguage.languageMap['year']=='Year'}">
                                     <span class="boxLang activeLang" id="Eng" style="float:left;">
-                                        <img onclick="${ns}doSubmit('eng')" src="<%= request.getContextPath()%>/resources/images/eng.png" style="cursor: pointer; margin-top:3px;">
+                                        <img onclick="${ns}doSubmit('eng')" src="/EISDashboardPortlet/resources/images/eng.png" style="cursor: pointer; margin-top:3px;">
                                     </span>
                                     <span class="boxLang" id="TH" style="float:left;">
-                                    <img onclick="${ns}doSubmit('th')" src="<%= request.getContextPath()%>/resources/images/th.png" style="cursor: pointer; margin-top:3px;">
+                                    <img onclick="${ns}doSubmit('th')" src="/EISDashboardPortlet/resources/images/th.png" style="cursor: pointer; margin-top:3px;">
                                 </span>
                                 </c:if>
                                 <c:if test="${kissLanguage.languageMap['year']!='Year'}">
                                     <span class="boxLang" id="Eng" style="float:left;">
-                                        <img onclick="${ns}doSubmit('eng')" src="<%= request.getContextPath()%>/resources/images/eng.png" style="cursor: pointer; margin-top:3px;">
+                                        <img onclick="${ns}doSubmit('eng')" src="/EISDashboardPortlet/resources/images/eng.png" style="cursor: pointer; margin-top:3px;">
                                     </span>
                                     <span class="boxLang activeLang" id="TH" style="float:left;">
-                                        <img onclick="${ns}doSubmit('th')" src="<%= request.getContextPath()%>/resources/images/th.png" style="cursor: pointer; margin-top:3px;">
+                                        <img onclick="${ns}doSubmit('th')" src="/EISDashboardPortlet/resources/images/th.png" style="cursor: pointer; margin-top:3px;">
                                     </span>
                                 </c:if>
                                 --%>
@@ -171,7 +171,7 @@ if(role){
                 <div class="span6 pad">
                     <div class="title">
                         <div class="imgHead">
-                            <img class="iconImg" src="<%= request.getContextPath()%>/resources/images/ICON_1.png">
+                            <img class="iconImg" src="/EISDashboardPortlet/resources/images/ICON_1.png">
                         </div>
                         <div class="txtHeadBox">
                             <span id="${ns}student_languageMap" class="txtHead">${kissLanguage.languageMap['student']}</span>
@@ -198,14 +198,14 @@ if(role){
                             <div class="" style="width: 50%; float: left;">
                                 <div class="Box textC">
                                     <p class="textC fontLevel03 orangeText" id="${ns}male_students_languageMap">${kissLanguage.languageMap['male']}</p>
-                                    <img src="/EISDash<%= request.getContextPath()%>/es/images/ICON_2.png" width="50" height="70">
+                                    <img src="/EISDashboardPortlet/resources/images/ICON_2.png" width="50" height="70">
                                     <p class="orangeText fontLevel01" name="perM" id="percent_male">0%</p>
                                 </div>
                             </div>
                             <div class="" style="width: 50%; float: left;">
                                 <div class="Box textC">
                                     <p class="textC fontLevel03 blueText" id="${ns}female_students_languageMap">${kissLanguage.languageMap['female']}</p>
-                                    <img src="<%= request.getContextPath()%>/resources/images/ICON_3.png" width="50" height="70">
+                                    <img src="/EISDashboardPortlet/resources/images/ICON_3.png" width="50" height="70">
                                     <p class="blueText fontLevel01" name="perW" id="percent_female">0%</p>
                                 </div>
                             </div>
@@ -221,7 +221,7 @@ if(role){
                         <div class="span12 pad" style="margin-bottom: 5px;">
                             <div class="title" style="margin-top:0.9%;">
                                 <div class="imgHead">
-                                    <img class="iconImg" src="<%= request.getContextPath()%>/resources/images/ICON_8.png">
+                                    <img class="iconImg" src="/EISDashboardPortlet/resources/images/ICON_8.png">
                                 </div>
                                 <div class="txtHeadBox">
                                     <span id="${ns}academic_languageMap"  class="txtHead">${kissLanguage.languageMap['academic']}</span>
@@ -233,7 +233,7 @@ if(role){
                                         <div style="width: 60%; float: left;">
                                             <div class="Box textC">
                                                 <div style="width:50%; float:left;">
-                                                    <img src="<%= request.getContextPath()%>/resources/images/ICON_9.png" width="38" height="30"/>
+                                                    <img src="/EISDashboardPortlet/resources/images/ICON_9.png" width="38" height="30"/>
                                                 </div>
                                                 <div style="width:50%; float:left;">
                                                     <div class="orangeText textC fontLevel01" id="faculties_schools"> 0 </div>
@@ -263,7 +263,7 @@ if(role){
                         <div class="span12 pad">
                             <div class="title">
                                 <div class="imgHead">
-                                    <img src="<%= request.getContextPath()%>/resources/images/ICON_10.png" class="iconImg">
+                                    <img src="/EISDashboardPortlet/resources/images/ICON_10.png" class="iconImg">
                                 </div>
                                 <div class="txtHeadBox">
                                     <span id="${ns}programs_languageMap" class="txtHead">${kissLanguage.languageMap['programs']}</span>
@@ -271,7 +271,7 @@ if(role){
                             </div>
                             <div class="row-fluid" style="margin-top:10px">
                                 <div style="width:30%; padding-left:20px; float:left;">
-                                    <img src="<%= request.getContextPath()%>/resources/images/orangeLine.png" width="100"/>
+                                    <img src="/EISDashboardPortlet/resources/images/orangeLine.png" width="100"/>
                                 </div>
 
                                 <div style="width:70%; float:left;">
@@ -298,7 +298,7 @@ if(role){
                                     </div>
                                 </div>
                                 <div style="width:20%; float:left; padding-right:15px; text-align:right;">
-                                    <img src="<%= request.getContextPath()%>/resources/images/blueLine.png" width="60"/>
+                                    <img src="/EISDashboardPortlet/resources/images/blueLine.png" width="60"/>
                                 </div>
                             </div>
                             <div class="span12" style="margin-top:10px;">
@@ -321,12 +321,12 @@ if(role){
             <div class="row">
                 <div class="span12 pad">
                     <div class="title">
-                        <img src="<%= request.getContextPath()%>/resources/images/ICON_4.png" class="iconImg" style="float:left;margin-right:2%;">
+                        <img src="/EISDashboardPortlet/resources/images/ICON_4.png" class="iconImg" style="float:left;margin-right:2%;">
                         <span id="${ns}employees_languageMap" class="txtHead" style="float:left;line-height:45px;">${kissLanguage.languageMap['employees']}</span>
                     </div>
                     <div class="row-fluid textC pad_1" style="position:relative;">
                         <div class="span2">
-                            <img src="<%= request.getContextPath()%>/resources/images/ICON_5.png" width="109" height="80">
+                            <img src="/EISDashboardPortlet/resources/images/ICON_5.png" width="109" height="80">
                         </div>
                         <div class="span10">
                             <div  style="width:30%; float:left;">
@@ -336,7 +336,7 @@ if(role){
                             </div>
                             <!-- absolute line -->
                             <div style="width:20%; float:left;margin-top:3%;">
-                                <img src="<%= request.getContextPath()%>/resources/images/line.png" />
+                                <img src="/EISDashboardPortlet/resources/images/line.png" />
                             </div>
                             <div style="width:50%; float:left;margin-top:2.7%;">
                                 <div class="progress" style="position:relative;top:1em;">
@@ -349,7 +349,7 @@ if(role){
                     </div>
                     <div class="row-fluid textC pad_1" style="position: relative;">
                         <div class="span2">
-                            <img src="<%= request.getContextPath()%>/resources/images/ICON_6.png" width="80" height="80">
+                            <img src="/EISDashboardPortlet/resources/images/ICON_6.png" width="80" height="80">
                         </div>
                         <div class="span10">
                             <div style="width:30%; float:left;">
@@ -358,7 +358,7 @@ if(role){
                             </div>
                             <div style="width:20%; float:left;margin-top:3%;">
                                 <!-- absolute line -->
-                                <img src="<%= request.getContextPath()%>/resources/images/line.png">
+                                <img src="/EISDashboardPortlet/resources/images/line.png">
                             </div>
                             <div style="width:50%; float:left;margin-top:2.7%;">
                                 <div class="progress" style="position:relative;top:1em;">
@@ -371,7 +371,7 @@ if(role){
                     </div>
                     <div class="row-fluid textC pad_1" style="position: relative;">
                         <div class="span2">
-                            <img src="<%= request.getContextPath()%>/resources/images/ICON_7.png" width="80" height="80">
+                            <img src="/EISDashboardPortlet/resources/images/ICON_7.png" width="80" height="80">
                         </div>
                         <div class="span10">
                             <div style="width:30%; float:left;">
@@ -381,7 +381,7 @@ if(role){
                             </div>
                             <div style="width:20%; float:left;margin-top:3%;">
                                 <!-- absolute line  -->
-                                <img src="<%= request.getContextPath()%>/resources/images/line.png">
+                                <img src="/EISDashboardPortlet/resources/images/line.png">
                             </div>
                             <div style="width:50%; float:left;margin-top:2.7%;">
                                 <div class="progress" style="position:relative;top:1em;">
@@ -418,7 +418,7 @@ if(role){
                 <div class="span12 pad">
                     <div class="title" style="margin-top:0.763%;">
                         <div class="imgHead">
-                            <img src="<%= request.getContextPath()%>/resources/images/ICON_11.png" class="iconImg">
+                            <img src="/EISDashboardPortlet/resources/images/ICON_11.png" class="iconImg">
                         </div>
                         <div class="txtHeadBox">
                             <span id="${ns}budget_languageMap"  class="txtHead">${kissLanguage.languageMap['budget']}</span>
@@ -458,7 +458,7 @@ if(role){
                 <div class="span12 pad">
                     <div class="title">
                         <div class="imgHead">
-                            <img src="<%= request.getContextPath()%>/resources/images/ICON_12.png" class="iconImg">
+                            <img src="/EISDashboardPortlet/resources/images/ICON_12.png" class="iconImg">
                         </div>
                         <div class="txtHeadBox">
                             <span id="${ns}employability_languageMap" class="txtHead">${kissLanguage.languageMap['employability']}</span>
@@ -469,10 +469,10 @@ if(role){
                             <p class="smlBlue fontLevel01" id="undergraduate">0%</p>
                             <p id="${ns}undergraduate_languageMap" class="grayText midle fontLevel02">${kissLanguage.languageMap['undergraduate']}</p>
                         </div>
-                        <div style="width:50%;float:left;margin-top:20px;"> <img src="<%= request.getContextPath()%>/resources/images/ICON_13.png" style="margin: 0% 30%;" width="70" height="70"> </div>
+                        <div style="width:50%;float:left;margin-top:20px;"> <img src="/EISDashboardPortlet/resources/images/ICON_13.png" style="margin: 0% 30%;" width="70" height="70"> </div>
                     </div>
                     <div class="row" style="display: flex;margin:1% 0 1% 2%;width: 100%;">
-                        <div style="width:50%;float:left;"> <img src="<%= request.getContextPath()%>/resources/images/ICON_14.png" style="margin: 0% 30%;" width="90" height="53"> </div>
+                        <div style="width:50%;float:left;"> <img src="/EISDashboardPortlet/resources/images/ICON_14.png" style="margin: 0% 30%;" width="90" height="53"> </div>
                         <div class="textC" style="width:50%;float:left;">
                             <p class="fontLevel01 orangeText" id="graduate">0%</p>
                             <p id="${ns}graduate_languageMap" class="grayText midle fontLevel02">${kissLanguage.languageMap['graduate']}</p>
@@ -794,43 +794,43 @@ if(role){
         var year=decodeURIComponent($.urlParam('year'));
         var lang=decodeURIComponent($.urlParam('lang'));
         var lang_str="<span class=\"boxLang\" id=\"commmentEIS\">"+
-                "<img  src=\"<%= request.getContextPath()%>/resources/images/comment.jpg\" style=\"cursor: pointer; width:26px;margin-top:3px\">"+
+                "<img  src=\"/EISDashboardPortlet/resources/images/comment.jpg\" style=\"cursor: pointer; width:26px;margin-top:3px\">"+
                 "</span><span class=\"boxLang\" id=\"print\">"+
-                "<img onclick=\"${ns}printFile()\" src=\"<%= request.getContextPath()%>/resources/images/download1.png\" style=\"cursor: pointer;width:27px;margin-top:3px;\">"+
+                "<img onclick=\"${ns}printFile()\" src=\"/EISDashboardPortlet/resources/images/download1.png\" style=\"cursor: pointer;width:27px;margin-top:3px;\">"+
                 "</span>";
         if(year !=null && year!='null'){
             $("#${ns}year").val(year);
             if(lang=='eng'){
                 lang_str=lang_str+" <span class=\"boxLang activeLang\" id=\"Eng\"> "+
-                        " <img onclick=\"${ns}doSubmit('eng')\" src=\"<%= request.getContextPath()%>/resources/images/eng.png\" style=\"cursor: pointer; margin-top:3px;\"> "+
+                        " <img onclick=\"${ns}doSubmit('eng')\" src=\"/EISDashboardPortlet/resources/images/eng.png\" style=\"cursor: pointer; margin-top:3px;\"> "+
                         "</span> "+
                         " <span class=\"boxLang\" id=\"TH\"> "+
-                        "<img onclick=\"${ns}doSubmit('th')\" src=\"<%= request.getContextPath()%>/resources/images/th.png\" style=\"cursor: pointer; margin-top:3px;\"> "+
+                        "<img onclick=\"${ns}doSubmit('th')\" src=\"/EISDashboardPortlet/resources/images/th.png\" style=\"cursor: pointer; margin-top:3px;\"> "+
                         "</span> ";
             }
             else{
                 lang_str=lang_str+"   <span class=\"boxLang\" id=\"Eng\"> "+
-                        " <img onclick=\"${ns}doSubmit('eng')\" src=\"<%= request.getContextPath()%>/resources/images/eng.png\" style=\"cursor: pointer; margin-top:3px;\"> "+
+                        " <img onclick=\"${ns}doSubmit('eng')\" src=\"/EISDashboardPortlet/resources/images/eng.png\" style=\"cursor: pointer; margin-top:3px;\"> "+
                         " </span> "+
                         " <span class=\"boxLang activeLang\" id=\"TH\"> "+
-                        "  <img onclick=\"${ns}doSubmit('th')\" src=\"<%= request.getContextPath()%>/resources/images/th.png\" style=\"cursor: pointer; margin-top:3px;\"> "+
+                        "  <img onclick=\"${ns}doSubmit('th')\" src=\"/EISDashboardPortlet/resources/images/th.png\" style=\"cursor: pointer; margin-top:3px;\"> "+
                         "</span>";
             }
         }else{
             <c:if test="${kissLanguage.languageMap['year']=='Year'}">
             lang_str=lang_str+" <span class=\"boxLang activeLang\" id=\"Eng\"> "+
-                    " <img onclick=\"${ns}doSubmit('eng')\" src=\"<%= request.getContextPath()%>/resources/images/eng.png\" style=\"cursor: pointer; margin-top:3px;\"> "+
+                    " <img onclick=\"${ns}doSubmit('eng')\" src=\"/EISDashboardPortlet/resources/images/eng.png\" style=\"cursor: pointer; margin-top:3px;\"> "+
                     "</span> "+
                     " <span class=\"boxLang\" id=\"TH\"> "+
-                    "<img onclick=\"${ns}doSubmit('th')\" src=\"<%= request.getContextPath()%>/resources/images/th.png\" style=\"cursor: pointer; margin-top:3px;\"> "+
+                    "<img onclick=\"${ns}doSubmit('th')\" src=\"/EISDashboardPortlet/resources/images/th.png\" style=\"cursor: pointer; margin-top:3px;\"> "+
                     "</span> ";
             </c:if>
             <c:if test="${kissLanguage.languageMap['year']!='Year'}">
             lang_str=lang_str+"   <span class=\"boxLang\" id=\"Eng\"> "+
-                    " <img onclick=\"${ns}doSubmit('eng')\" src=\"<%= request.getContextPath()%>/resources/images/eng.png\" style=\"cursor: pointer; margin-top:3px;\"> "+
+                    " <img onclick=\"${ns}doSubmit('eng')\" src=\"/EISDashboardPortlet/resources/images/eng.png\" style=\"cursor: pointer; margin-top:3px;\"> "+
                     " </span> "+
                     " <span class=\"boxLang activeLang\" id=\"TH\"> "+
-                    "  <img onclick=\"${ns}doSubmit('th')\" src=\"<%= request.getContextPath()%>/resources/images/th.png\" style=\"cursor: pointer; margin-top:3px;\"> "+
+                    "  <img onclick=\"${ns}doSubmit('th')\" src=\"/EISDashboardPortlet/resources/images/th.png\" style=\"cursor: pointer; margin-top:3px;\"> "+
                     "</span>";
             </c:if>
         }

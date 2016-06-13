@@ -30,7 +30,7 @@
          <title>EIS Dashboard Executive Summary</title>
       </portlet-info>
       
-      
+      <!-- 
 	    <security-role-ref>
 		<role-name>administrator</role-name>
 		</security-role-ref>
@@ -51,7 +51,7 @@
 		<security-role-ref>
 			<role-name>dataentry</role-name>
 		</security-role-ref>
-		
+		 -->
 		
 		
 		

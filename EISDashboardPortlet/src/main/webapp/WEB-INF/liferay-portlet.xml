@@ -26,6 +26,7 @@
 		<role-name>user</role-name>
 		<role-link>User</role-link>
 	</role-mapper>
+	<!-- 
 	<role-mapper>
 		<role-name>kmutt-user</role-name>
 		<role-link>KMUTT USER</role-link>
@@ -34,5 +35,6 @@
 		<role-name>dataentry</role-name>
 		<role-link>Data Entry</role-link>
 	</role-mapper>
-	
+	 -->
 </liferay-portlet-app>
+ 
