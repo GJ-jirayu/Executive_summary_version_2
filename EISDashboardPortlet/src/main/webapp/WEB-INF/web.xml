@@ -6,11 +6,11 @@
          id="WebApp_ID" version="2.4">
     <display-name>EIS Dashboard Executive Summary</display-name>
     <description>EIS Dashboard Executive Summary</description>
-    <!--
+    
     <listener>
         <listener-class>org.directwebremoting.servlet.DwrListener</listener-class>
     </listener>
-    -->
+    
     <context-param>
         <param-name>log4jConfigLocation</param-name>
         <param-value>/WEB-INF/log4j.properties</param-value>

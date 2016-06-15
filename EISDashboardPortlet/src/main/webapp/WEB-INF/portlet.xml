@@ -17,10 +17,7 @@
       <portlet-class>org.springframework.web.portlet.DispatcherPortlet</portlet-class>
       <init-param>
          <name>contextConfigLocation</name>
-         <value> 
-         /WEB-INF/context/common.xml
-         /WEB-INF/context/dashboard-portlet.xml
-         </value>
+         <value>/WEB-INF/context/dashboard-portlet.xml /WEB-INF/context/common.xml</value>
       </init-param>
       <supports>
          <mime-type>text/html</mime-type>
