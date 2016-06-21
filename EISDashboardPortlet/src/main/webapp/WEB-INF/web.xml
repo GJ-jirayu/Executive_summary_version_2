@@ -11,6 +11,11 @@
         <listener-class>org.directwebremoting.servlet.DwrListener</listener-class>
     </listener>
     
+    <context-param> 
+		<param-name>webAppRootKey</param-name> 
+		<param-value>eisdashboard.root</param-value> 
+	</context-param>
+	
     <context-param>
         <param-name>log4jConfigLocation</param-name>
         <param-value>/WEB-INF/log4j.properties</param-value>
@@ -22,6 +27,8 @@
             <!--  /WEB-INF/context/research-data-hibernate.xml  -->
         </param-value>
     </context-param>
+    
+
     <listener>
         <listener-class>org.springframework.web.util.Log4jConfigListener</listener-class>
     </listener>

@@ -30,12 +30,13 @@
     <link rel="stylesheet"
           href="<c:url value="/resources/font-awesome/weloveiconfonts.css"/>" type="text/css"/>
     <%-- --%>
-    <link rel="stylesheet"
-          href="<c:url value="/resources/css/stycss.css"/>" type="text/css"/>
+    
 
           <link rel="stylesheet"
           href="<c:url value="/resources/jquery-ui/css/custom-theme/jquery-ui-1.10.4.custom.css"/>" type="text/css"/>
-
+		
+		 <link rel="stylesheet"
+          href="<c:url value="/resources/css/stycss.css"/>" type="text/css"/>
 
 
     <style type="text/css">
@@ -76,7 +77,7 @@
             line-height: none;
         }
         @media print {
-            body {-webkit-print-color-adjust: exact;}
+          .aui  body {-webkit-print-color-adjust: exact;}
         }
 
         .ui-dialog .ui-dialog-content{
@@ -198,7 +199,7 @@ if(role){
                             <div class="" style="width: 50%; float: left;">
                                 <div class="Box textC">
                                     <p class="textC fontLevel03 orangeText" id="${ns}male_students_languageMap">${kissLanguage.languageMap['male']}</p>
-                                    <img src="/EISDash<%= request.getContextPath()%>/es/images/ICON_2.png" width="50" height="70">
+                                    <img src="<%= request.getContextPath()%>/resources/images/ICON_2.png" width="50" height="70">
                                     <p class="orangeText fontLevel01" name="perM" id="percent_male">0%</p>
                                 </div>
                             </div>
