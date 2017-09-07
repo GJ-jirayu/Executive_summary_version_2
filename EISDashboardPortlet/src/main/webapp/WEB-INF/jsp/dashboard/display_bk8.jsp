@@ -96,21 +96,10 @@ if(role){
 }
 
 %>
-
-
-
-
-
- 
  <div id="dialog-comment-db2" title="Commment" >
   <span id="CommentAreaDB2">	
   </span>  		
 </div>
-
-
-
-
-
 
 
 <div class="modal fade" id="${ns}doloadModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
@@ -601,17 +590,17 @@ if(role){
                                 var full_time_master_percent=(employeeM.full_time_master_percent!=null?(employeeM.full_time_master_percent):("0"))+"%"
                                 var full_time_doctoral_percent=(employeeM.full_time_doctoral_percent!=null?(employeeM.full_time_doctoral_percent):("0"))+"%"
 
-                                $("#factory_member_bachelor_lower_percent").html(factory_member_bachelor_lower_percent).attr("title",factory_member_bachelor_lower_percent);
-                                $("#factory_member_master_percent").html(factory_member_master_percent).attr("title",factory_member_master_percent);
-                                $("#factory_member_doctoral_percent").html(factory_member_doctoral_percent).attr("title",factory_member_doctoral_percent);
+                                $("#factory_member_bachelor_lower_percent").html(factory_member_bachelor_lower_percent);
+                                $("#factory_member_master_percent").html(factory_member_master_percent);
+                                $("#factory_member_doctoral_percent").html(factory_member_doctoral_percent);
 
-                                $("#researcher_bachelor_lower_percent").html(researcher_bachelor_lower_percent).attr("title",researcher_bachelor_lower_percent);
-                                $("#researcher_master_percent").html(researcher_master_percent).attr("title",researcher_master_percent);
-                                $("#researcher_doctoral_percent").html(researcher_doctoral_percent).attr("title",researcher_doctoral_percent);
+                                $("#researcher_bachelor_lower_percent").html(researcher_bachelor_lower_percent);
+                                $("#researcher_master_percent").html(researcher_master_percent);
+                                $("#researcher_doctoral_percent").html(researcher_doctoral_percent);
 
-                                $("#full_time_bachelor_lower_percent").html(full_time_bachelor_lower_percent).attr("title",full_time_bachelor_lower_percent);
-                                $("#full_time_master_percent").html(full_time_master_percent).attr("title",full_time_master_percent);
-                                $("#full_time_doctoral_percent").html(full_time_doctoral_percent).attr("title",full_time_doctoral_percent);
+                                $("#full_time_bachelor_lower_percent").html(full_time_bachelor_lower_percent);
+                                $("#full_time_master_percent").html(full_time_master_percent);
+                                $("#full_time_doctoral_percent").html(full_time_doctoral_percent);
 
                                 $("#factory_member_bachelor_lower_percent").css("width",factory_member_bachelor_lower_percent);
                                 $("#factory_member_master_percent").css("width",factory_member_master_percent);
@@ -800,7 +789,9 @@ if(role){
 
     }
     $( document ).ready(function() {
-    	$( document ).tooltip();
+
+
+
         var year=decodeURIComponent($.urlParam('year'));
         var lang=decodeURIComponent($.urlParam('lang'));
         var lang_str="<span class=\"boxLang\" id=\"commmentEIS\">"+
