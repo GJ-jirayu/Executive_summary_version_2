@@ -40,6 +40,74 @@
 
 
     <style type="text/css">
+    
+ /*manage tooltip start*/   
+ /*
+   .ui-tooltip {
+    width: 60px;
+    text-align: center;
+    box-shadow: none;
+    padding: 0;
+    border-radius:0px;
+    border-color:#aaa;
+    font-size:13px;
+}
+.ui-tooltip-content {
+    position: relative;
+    padding: 5px;
+}
+.ui-tooltip-content::after, .ui-tooltip-content::before {
+    content: "";
+    position: absolute;
+    border-style: solid;
+    display: block;
+    left: 20px;
+}
+.bottom .ui-tooltip-content::before {
+    bottom: -10px;
+    border-color: #aaa transparent;
+    border-width: 10px 10px 0;
+}
+.bottom .ui-tooltip-content::after {
+    bottom: -7px;
+    border-color: white transparent;
+    border-width: 10px 10px 0;
+}
+.top .ui-tooltip-content::before {
+    top: -10px;
+    border-color: #aaa transparent;
+    border-width: 0 10px 10px;
+}
+.top .ui-tooltip-content::after {
+    top: -7px;
+    border-color: white transparent;
+    border-width: 0 10px 10px;
+}
+*/
+ .ui-tooltip {
+    background-color: rgba(255, 255, 255, 1);
+    border-color: rgba(84, 84, 84, 1);
+    border-radius: 0;
+    border-style: solid;
+    border-width: 1px;
+    box-shadow: none;
+    color: #555555;
+    display: block;
+    font-family: Verdana,sans;
+    font-size: 9px;
+    line-height: 10.8px;
+    overflow: hidden;
+    padding: 3px;
+    white-space: nowrap;
+}
+.ui-tooltip-content {
+    position: relative;
+    padding: 0px;
+}
+/*manage tooltip end*/  
+
+ 
+
     .ui-dialog-titlebar .ui-button-text{
 	    padding-top: 0px;
 	    padding-bottom: 0px;
@@ -65,7 +133,7 @@
         .languageChange {margin-top:0.3%;}
         .boxLang{margin:5px;height: 23px;width: 35px;}
         .activeLang{border:1px solid #C8C8C8;background:#EAE7E7;padding:1px 5px 8px 5px;}
-        .progress{height:33px!important;}
+        .progress{height:33px!important;cursor:pointer;}
         .aui .progress .bar {color:black!important;font-size:13px;}
         .aui select, .aui textarea, .aui input[type="text"], .aui input[type="password"], .aui input[type="datetime"], .aui input[type="datetime-local"], .aui input[type="date"], .aui input[type="month"], .aui input[type="time"], .aui input[type="week"], .aui input[type="number"], .aui input[type="email"], .aui input[type="url"], .aui input[type="search"], .aui input[type="tel"], .aui input[type="color"], .aui .uneditable-input {font-size: 16px;text-align: center;color: #000;}
         .blodYear {width: 50px;height: 30px;border-top: 1px solid #e5e5e5;border-bottom: 1px solid #e5e5e5;border-left: 1px solid #e5e5e5;background-color: #e5e5e5;text-align: center;padding: 5px 1%;font-size: 16px !important;color:#000;}
@@ -800,7 +868,19 @@ if(role){
 
     }
     $( document ).ready(function() {
-    	$( document ).tooltip();
+    	//$( ".progress" ).tooltip();
+    	$( ".progress" ).tooltip({
+    		 track: true,
+    		 open: function (event, ui) {
+    		        ui.tooltip.css({"border-width":"1px"});
+    		    },
+    		    position: {
+    		           my: "left+3 bottom-3",
+
+    		       
+    		    }
+    	
+    	});
         var year=decodeURIComponent($.urlParam('year'));
         var lang=decodeURIComponent($.urlParam('lang'));
         var lang_str="<span class=\"boxLang\" id=\"commmentEIS\">"+
