@@ -1,6 +1,4 @@
-# Executive_summary_version_2
-
-#EISDashboardPortlet
+# EISDashboardPortlet
 - Liferay version: 6.2
 - java version: 1.7
 - Liferay tomcat library (Required): 
