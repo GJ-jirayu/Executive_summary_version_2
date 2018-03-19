@@ -30,18 +30,18 @@
     <link rel="stylesheet"
           href="<c:url value="/resources/font-awesome/weloveiconfonts.css"/>" type="text/css"/>
     <%-- --%>
-    
+
 
           <link rel="stylesheet"
           href="<c:url value="/resources/jquery-ui/css/custom-theme/jquery-ui-1.10.4.custom.css"/>" type="text/css"/>
-		
+
 		 <link rel="stylesheet"
           href="<c:url value="/resources/css/stycss.css"/>" type="text/css"/>
 
 
     <style type="text/css">
-    
- /*manage tooltip start*/   
+
+ /*manage tooltip start*/
  /*
    .ui-tooltip {
     width: 60px;
@@ -104,9 +104,9 @@
     position: relative;
     padding: 0px;
 }
-/*manage tooltip end*/  
+/*manage tooltip end*/
 
- 
+
 
     .ui-dialog-titlebar .ui-button-text{
 	    padding-top: 0px;
@@ -169,10 +169,10 @@ if(role){
 
 
 
- 
+
  <div id="dialog-comment-db2" title="Commment" >
-  <span id="CommentAreaDB2">	
-  </span>  		
+  <span id="CommentAreaDB2">
+  </span>
 </div>
 
 
@@ -473,17 +473,17 @@ if(role){
                         </div>
                     </div>
                     <div class="row-fluid">
-                        <div style="float: right;width:320px;">
+                        <div style="float: right;width:370px; font-size:14px;">
                             <div class="legend-box" style="width: 42%; float:left;">
-                                <div class="legend" style="background-color: #dbdbdb;float:left;"></div>
+                                <div class="legend" style="height: 13px;width: 13px; background-color: #dbdbdb;float:left;"></div>
                                 <div id="${ns}bachelor_low_languageMap" class="grayText span10" style="float:left;"> ${kissLanguage.languageMap['bachelor_low']}</div>
                             </div>
                             <div class="legend-box" style="width: 23%; float:left;">
-                                <div class="legend" style="background-color: #ffbf93;float:left;"></div>
+                                <div class="legend" style="height: 13px;width: 13px; background-color: #ffbf93;float:left;"></div>
                                 <div id="${ns}master_s_languageMap" class="grayText" style="float:left;">${kissLanguage.languageMap['master_s']}</div>
                             </div>
                             <div class="legend-box" style="width: 25%; float:left;">
-                                <div class="legend" style="background-color: #ff8837;float:left;"></div>
+                                <div class="legend" style="height: 13px;width: 13px;background-color: #ff8837;float:left;"></div>
                                 <div id="${ns}doctoral_languageMap" class="grayText" style="float:left;">${kissLanguage.languageMap['doctoral']}</div>
                             </div>
                         </div>
@@ -544,7 +544,9 @@ if(role){
                             <span id="${ns}employability_languageMap" class="txtHead">${kissLanguage.languageMap['employability']}</span>
                         </div>
                     </div>
-                    <div class="row" style="display: flex;margin:1% 0 1% 2%;width: 100%;">
+
+
+                    <!-- <div class="row" style="display: flex;margin:1% 0 1% 2%;width: 100%;">
                         <div class="textC" style="width:50%;float:left;">
                             <p class="smlBlue fontLevel01" id="undergraduate">0%</p>
                             <p id="${ns}undergraduate_languageMap" class="grayText midle fontLevel02">${kissLanguage.languageMap['undergraduate']}</p>
@@ -557,7 +559,30 @@ if(role){
                             <p class="fontLevel01 orangeText" id="graduate">0%</p>
                             <p id="${ns}graduate_languageMap" class="grayText midle fontLevel02">${kissLanguage.languageMap['graduate']}</p>
                         </div>
+                    </div> -->
+
+
+                    <div class="row" style="display: flex;margin:1% 0 1% 2%;width: 100%;">
+                        <div class="textC" style="width:50%;float:left;">
+                            <p class="smlBlue fontLevel01" id="undergraduate">0%</p>
+                            <p id="${ns}undergraduate_languageMap" class="grayText midle fontLevel02">${kissLanguage.languageMap['undergraduate']}</p>
+                        </div>
+                        <div class="textC" style="width:50%;float:left;">
+                            <p class="fontLevel01 orangeText" id="graduate">0%</p>
+                            <p id="${ns}graduate_languageMap" class="grayText midle fontLevel02">${kissLanguage.languageMap['graduate']}</p>
+                        </div>
+
                     </div>
+                    <div class="row" style="display: flex;margin:1% 0 1% 2%;width: 100%;">
+                        <div style="width:50%;float:left;"> <img src="<%= request.getContextPath()%>/resources/images/ICON_14.png" style="margin: 0% 30%;" width="90" height="53"> </div>
+                        <div style="width:50%;float:left;"> <img src="<%= request.getContextPath()%>/resources/images/ICON_13.png" style="margin: 0% 30%;" width="60" height="53"> </div>
+                    </div>
+
+
+
+
+
+
                 </div>
             </div>
         </div>
@@ -847,7 +872,7 @@ if(role){
     function ${ns}setHiddenValue(obj){
         //alert(obj.value)
         var yearVal=parseInt(obj.value)
-        
+
         <c:if test="${dashboardForm.lang=='th'}">
             yearVal=yearVal-543;
         </c:if>
@@ -877,9 +902,9 @@ if(role){
     		    position: {
     		           my: "left+3 bottom-3",
 
-    		       
+
     		    }
-    	
+
     	});
         var year=decodeURIComponent($.urlParam('year'));
         var lang=decodeURIComponent($.urlParam('lang'));
@@ -929,31 +954,31 @@ if(role){
 
 
         //management comment start
-       
+
 
         /*###################script for EIS Start###################*/
-    	
-    	
+
+
     	var getCurrentDateDB2Time =  function(){
     		var d = new Date();
-    		var monthCurrent = d.getMonth(); 
-    		var dayCurrent = d.getDate(); 
+    		var monthCurrent = d.getMonth();
+    		var dayCurrent = d.getDate();
     		var monthTHCurrent=parseInt(monthCurrent)+1;
-    		var yearCurrent = d.getFullYear(); 
-    		var hourCurrent = d.getHours(); 
-    		var minuteCurrent = d.getMinutes(); 
-    		var secondCurrent = d.getSeconds(); 
-    		
+    		var yearCurrent = d.getFullYear();
+    		var hourCurrent = d.getHours();
+    		var minuteCurrent = d.getMinutes();
+    		var secondCurrent = d.getSeconds();
+
     		var dateTime = yearCurrent+"-"+monthTHCurrent+"-"+dayCurrent+" "+hourCurrent+":"+minuteCurrent+":"+secondCurrent;
     		//alert(dateTime);
     		return dateTime;
-    		
-    		
-    		
+
+
+
     	}
     	var updateCommentDB2Fn = function(paramComment){
-    		
-    		
+
+
     		$.ajax({
     			url:"/kmutt-super-kpi-portlet/Model/updateCommentDB2.jsp",
     			type:"get",
@@ -970,16 +995,16 @@ if(role){
     				$("#dialog-comment-db2").dialog( "close" );
     			}
     		});
-    		
+
     	}
     	var modalAddCOmmentDB2Fn = function(){
     		/*get comment from db2 start now*/
     			/*
     			if($("#checkRole").val().trim()=="Admin"){
-    				
+
     			}
     			*/
-    		
+
     	 		$.ajax({
     				url:"/kmutt-super-kpi-portlet/Model/selectCommentDB2.jsp",
     				type:"get",
@@ -987,18 +1012,18 @@ if(role){
     				async:false,
     				success:function(data){
     						//alert(data);
-    					
-    						
-    				/*-----------------------------------*/		
+
+
+    				/*-----------------------------------*/
 
     						if(data.trim()=="null"){
     							data="";
-    							
+
     						}
     						if($("#checkRole").val().trim()=="Admin"){
     						$("#CommentAreaDB2").hide();
     						setTimeout(function(){
-    							
+
     							$("#CommentAreaDB2").html("<textarea name=\"editor1\" id=\"editor1\" rows=\"9\" cols=\"85\">"+data+"</textarea>");
     							//$(".ui-dialog-buttonpane").show();
     						    editor=CKEDITOR.replace( 'editor1', {
@@ -1008,9 +1033,9 @@ if(role){
     						    $("#CommentAreaDB2").show();
     						});
     					  //dialog start
-    						
+
     					    $( "#dialog-comment-db2" ).dialog({
-    					    	
+
     					        resizable: true,
     					        //height:350,
     					        width:350,
@@ -1018,14 +1043,14 @@ if(role){
     					        buttons: {
     					          "Save": function() {
     					        	  //logic save data to dataabase start
-    					        	 
+
     					        	  editor_data = editor.getData();
     					        	  //alert(kpiID);
     					        	  //alert(editor_data);
-    					        	  
-    					        		  
+
+
     					        	  updateCommentDB2Fn(editor_data);
-    					        	 
+
     					           // $( this ).dialog( "close" );
     					          },
     					          Cancel: function() {
@@ -1034,39 +1059,39 @@ if(role){
     					        }
     					      });
     					    //dialog end
-    					    
+
     						}else{
-    							$("#CommentAreaDB2").html(data);	
+    							$("#CommentAreaDB2").html(data);
     							//$(".ui-dialog-buttonpane").hide();
     							//dialog start
     						    $( "#dialog-comment-db2" ).dialog({
-    						    	
+
     						        resizable: true,
     						        /*height:350,*/
     						        width:350,
     						        modal: true
-    						       
+
     						      });
     						    //dialog end
     						}
-    						
-    						/*-----------------------------------*/	
-    						
+
+    						/*-----------------------------------*/
+
     				}
     			});
-    			
+
     	 		/*get comment from db2 end */
     	}
      		$("#commmentEIS").click(function(){
-     			
+
      			modalAddCOmmentDB2Fn();
-     			
-     			
+
+
      		});
-     		
-     		
+
+
      		/*####################script for EIS Start####################*/
-        
+
 
         //management comment end
 
@@ -1105,14 +1130,14 @@ if(role){
             $("#${ns}year").val(year);
         }else{
             <c:if test="${not empty dashboardForm && not empty dashboardForm.lang && not empty dashboardForm.year}">
-                var yearVal=parseInt('${dashboardForm.year}')       
-                    <c:if test="${dashboardForm.lang=='th'}"> 
-                            yearVal=yearVal+543;  
+                var yearVal=parseInt('${dashboardForm.year}')
+                    <c:if test="${dashboardForm.lang=='th'}">
+                            yearVal=yearVal+543;
                     </c:if>
                     $("#${ns}year").val(yearVal);
             </c:if>
         }
-        
+
         //alert("year->"+year);
         //alert("lang->"+lang);
         //alert('${dashboardForm.year}')
